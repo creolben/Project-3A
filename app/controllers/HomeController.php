@@ -17,7 +17,11 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		return View::make('hello');
+		$generator = new Badcow\LoremIpsum\Generator();
+		$paragraphs = $generator->getParagraphs(5);
+
+		$name = 'Ben';
+		return View::make('hello', $name);
 	}
 
 }

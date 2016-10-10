@@ -1,3 +1,4 @@
+
 <?php
 
 class MainController extends \BaseController {
@@ -9,7 +10,12 @@ class MainController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('welcome');
+
+		$generator = new Badcow\LoremIpsum\Generator();
+		$paragraphs = $generator->getParagraphs(5);
+		$name = 'Ben';
+
+		return View::make('welcome', compact('paragraphs','name'));
 	}
 
 
@@ -20,9 +26,12 @@ class MainController extends \BaseController {
 	 */
 	public function about()
 	{
-		return View::make('second_page');
+		// alternatively, use another PSR-0 compliant autoloader (like the Symfony2 ClassLoader for instance)
+		
+		// use the factory to create a Faker\Generator instance
+		$faker = Faker\Factory::create();
+		return View::make('second_page',compact('faker'));
 	}
-
 
 	/**
 	 * Store a newly created resource in storage.
