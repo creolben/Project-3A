@@ -9,10 +9,10 @@
         <div>
           <h4>How many paragraphs do you want?</h4>
           <br>
-          <form class="form-inline" action="">
+          <form class="form-inline">
             <div class="form-group">
               <label for="exampleInputName2">Paragraphs</label>
-              <input type="text" class="form-control" id="num" placeholder="5" Value="5"><br>
+              <input type="text" class="form-control" name="num" placeholder="5" Value="5"><br>
             </div>
             <button type="submit" class="btn btn-danger">Generate!</button>
           </form>

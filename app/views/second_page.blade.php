@@ -14,7 +14,7 @@
               <form class="form-inline">
                 <div class="form-group">
                   <label for="exampleInputName2">Paragraphs</label>
-                  <input type="text" class="form-control input-sm" id="InputName2" Value="5">
+                  <input type="text" class="form-control" name="num" placeholder="5" Value="5">
                 </div>
                 <button type="submit" class="btn btn-danger">Generate!</button>
               </form>
@@ -25,7 +25,7 @@
 
 
             <div class="row">
-                <?php for ($i=0; $i < 10; $i++) { ?>
+                <?php for ($i=0; $i < $number; $i++) { ?>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-2 col-lg-offset-2 toppad" >
 
                 <div class="panel panel-info">

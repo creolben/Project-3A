@@ -10,12 +10,19 @@ class MainController extends \BaseController {
 	 */
 	public function index()
 	{
+		if (isset($_GET['num'])){
+			$number = $_GET['num'];
+
+		} else {
+				$number = 5;
+
+			}
+
 
 		$generator = new Badcow\LoremIpsum\Generator();
-		$paragraphs = $generator->getParagraphs(5);
-		$name = 'Ben';
-
-		return View::make('welcome', compact('paragraphs','name'));
+		$paragraphs = $generator->getParagraphs($number + 1);
+		$name = "Ben";
+		return View::make('welcome', compact('paragraphs','number'));
 	}
 
 
@@ -26,11 +33,18 @@ class MainController extends \BaseController {
 	 */
 	public function about()
 	{
+		if (isset($_GET['num'])){
+			$number = $_GET['num'];
+
+		} else {
+				$number = 5;
+
+			}
 		// alternatively, use another PSR-0 compliant autoloader (like the Symfony2 ClassLoader for instance)
-		
+
 		// use the factory to create a Faker\Generator instance
 		$faker = Faker\Factory::create();
-		return View::make('second_page',compact('faker'));
+		return View::make('second_page',compact('faker','number'));
 	}
 
 	/**
