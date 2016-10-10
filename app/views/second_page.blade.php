@@ -1,6 +1,4 @@
-<div class="hidden">
-  require_once '/path/to/Faker/src/autoload.php'
-</div>
+
 @extends('layout')
 @section('content')
   <div class="row features">
