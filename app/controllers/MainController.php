@@ -44,7 +44,7 @@ class MainController extends \BaseController {
 
 		// use the factory to create a Faker\Generator instance
 		$faker = Faker\Factory::create();
-		return View::make('second_page',compact('faker','number'));
+		return View::make('second_page', compact('faker','number'));
 	}
 
 	/**
