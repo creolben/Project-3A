@@ -16,16 +16,15 @@
     					    <button type="button" class="navbar-toggle menu-button" data-toggle="collapse" data-target="#myNavbar">
     					        <span class="glyphicon glyphicon-align-justify"></span>
     					    </button>
-          					<a class="navbar-brand logo" href="{{action('MainController@index')}}">Project 3</a>
+          					<a class="navbar-brand logo" href="{{action('MainController@index')}}">Developer's Best Friend</a>
         			</div>
     			</div>
     			<div class="col-md-8">
     				<nav class="collapse navbar-collapse" id="myNavbar" role="navigation">
     					<ul class="nav navbar-nav navbar-right menu">
-    							<li><a href="{{action('MainController@index')}}" class="page-scroll active">Home</a></li>
-    							<li><a href="{{action('MainController@about')}}" class="page-scroll">About</a></li>
-    							<li><a href="#work" class="page-scroll">Portfolio</a></li>
-    							<li><a href="#section4" class="page-scroll">Contact</a></li>
+    							<li><a href="{{action('MainController@index')}}" class="active">Home</a></li>
+    							<li><a href="{{action('MainController@about')}}">About</a></li>
+
     					</ul>
     				</nav>
     			</div>

@@ -9,24 +9,26 @@
         <div class="col-md-10 inner col-xs-10 col-xs-offset-1 col-sm-6">
           <div class="text-box">
             <div>
-              <h4>How many paragraphs do you want?</h4>
+              <h4>How many users do you want?</h4>
               <br>
               <form class="form-inline">
                 <div class="form-group">
-                  <label for="exampleInputName2">Paragraphs</label>
-                  <input type="text" class="form-control" name="num" placeholder="5" Value="5">
+                  <input type="text" class="form-control" name="num" placeholder="Enter # of users" Value="">
                 </div>
+                <br><br>
+                <div>
                 <button type="submit" class="btn btn-danger">Generate!</button>
+              </div>
               </form>
-              <h5>(Max: 99)</h5>
+              <h5>(Min: 1 | Max: 99)</h5>
           </div>
               <h2 class="intro">Developer's Best Friend</h2>
-              <div class="container">
+              <div>
 
 
             <div class="row">
                 <?php for ($i=0; $i < $number; $i++) { ?>
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-2 col-lg-offset-2 toppad" >
+              <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1" >
 
                 <div class="panel panel-info">
                   <div class="panel-heading">
@@ -36,7 +38,7 @@
 
                         <div class="row">
                           <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="{{$faker->imageUrl($width = 480, $height = 480)}}" class="img-circle img-responsive"> </div>
-                          <div class=" col-md-9 col-lg-9 ">
+                          <div class=" col-md-8 col-lg-8 ">
                             <table class="table table-user-information">
                               <tbody>
                                 <tr>

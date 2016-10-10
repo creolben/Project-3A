@@ -10,18 +10,16 @@ class MainController extends \BaseController {
 	 */
 	public function index()
 	{
-		if (isset($_GET['num'])){
-			$number = $_GET['num'];
+		if (isset($_POST['num']) AND !empty($_POST['num']) AND is_numeric($_POST['num']) AND $_POST['num'] > 0){
+			$number = $_POST['num'];
 
 		} else {
-				$number = 5;
+				$number = 3;
 
-			}
-
+		}
 
 		$generator = new Badcow\LoremIpsum\Generator();
 		$paragraphs = $generator->getParagraphs($number + 1);
-		$name = "Ben";
 		return View::make('welcome', compact('paragraphs','number'));
 	}
 
@@ -33,11 +31,14 @@ class MainController extends \BaseController {
 	 */
 	public function about()
 	{
-		if (isset($_GET['num'])){
-			$number = $_GET['num'];
+		/*
+		  validate number is not empty, is a number and greater than 1
+		*/
+		if (isset($_GET['num']) AND !empty($_GET['num']) AND is_numeric($_GET['num']) AND $_GET['num'] > 0){
+			  $number = $_GET['num'];
 
 		} else {
-				$number = 5;
+				$number = 3;
 
 			}
 		// alternatively, use another PSR-0 compliant autoloader (like the Symfony2 ClassLoader for instance)
