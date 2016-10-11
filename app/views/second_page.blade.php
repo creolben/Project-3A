@@ -3,7 +3,7 @@
 </div>
 @extends('layout')
 @section('content')
-  <div class="row features">
+  <div class="row backg">
     <div class="col-md-12">
       <div class="col-md-12">
         <div class="col-md-10 inner col-xs-10 col-xs-offset-1 col-sm-6">
