@@ -23,8 +23,6 @@
     				<nav class="collapse navbar-collapse" id="myNavbar" role="navigation">
     					<ul class="nav navbar-nav navbar-right menu">
     							<li><a href="{{action('MainController@index')}}" class="active">Home</a></li>
-    							<li><a href="{{action('MainController@about')}}">About</a></li>
-
     					</ul>
     				</nav>
     			</div>

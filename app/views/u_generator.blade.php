@@ -22,7 +22,7 @@
               </form>
               <h5>(Min: 1 | Max: 99)</h5>
           </div>
-              <h2 class="intro">Developer's Best Friend</h2>
+              <h2 class="intro">-----------</h2>
               <div>
 
 

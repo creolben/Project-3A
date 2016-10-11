@@ -13,4 +13,5 @@
 
 
 Route::get('/', 'MainController@index');
-Route::get('about', 'MainController@about');
+Route::get('user', 'MainController@user_gen');
+Route::get('paragraphs', 'MainController@paragraphs');

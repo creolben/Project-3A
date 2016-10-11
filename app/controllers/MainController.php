@@ -2,13 +2,24 @@
 <?php
 
 class MainController extends \BaseController {
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
+public function index()
+{
+
+	return View::make('home');
+}
+
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function paragraphs()
 	{
 		if (isset($_POST['num']) AND !empty($_POST['num']) AND is_numeric($_POST['num']) AND $_POST['num'] > 0){
 			$number = $_POST['num'];
@@ -20,7 +31,7 @@ class MainController extends \BaseController {
 
 		$generator = new Badcow\LoremIpsum\Generator();
 		$paragraphs = $generator->getParagraphs($number + 1);
-		return View::make('welcome', compact('paragraphs','number'));
+		return View::make('p_generator', compact('paragraphs','number'));
 	}
 
 
@@ -29,7 +40,7 @@ class MainController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function about()
+	public function user_gen()
 	{
 		/*
 		  validate number is not empty, is a number and greater than 1
@@ -45,7 +56,7 @@ class MainController extends \BaseController {
 
 		// use the factory to create a Faker\Generator instance
 		$faker = Faker\Factory::create();
-		return View::make('second_page', compact('faker','number'));
+		return View::make('u_generator', compact('faker','number'));
 	}
 
 

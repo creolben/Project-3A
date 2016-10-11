@@ -18,7 +18,7 @@
           </form>
           <h5>(Max: 99)</h5>
       </div>
-          <h2 class="intro">Developer's Best Friend</h2>
+          <h2 class="intro">-----------</h2>
           <p><{{implode('<p>', $paragraphs);}}</p>
       </div>
     </div>
