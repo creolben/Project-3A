@@ -10,15 +10,22 @@
           <h4>How many paragraphs do you want?</h4>
           <br>
           <form class="form-inline">
+
             <div class="form-group">
-              <label for="exampleInputName2">Paragraphs</label>
-              <input type="text" class="form-control" name="num" placeholder="5" Value="5"><br>
+              <div class="{{$message;}}">
+                  <input type="text" class="form-control" name="num" placeholder="# of Paragraphs" value="{{$fieldValue;}}">
+                  <span class="{{$feedback;}}"></span>
+              </div>
+              <br>
             </div>
+            <br><br>
+            <div class="row">
             <button type="submit" class="btn btn-danger">Generate!</button>
+          </div>
           </form>
-          <h5>(Max: 99)</h5>
+          <h5>(Min: 1 | Max: 99)</h5>
       </div>
-          <h2 class="intro">-----------</h2>
+          <h4 class="intro">-----------</h4>
           <p><{{implode('<p>', $paragraphs);}}</p>
       </div>
     </div>

@@ -13,7 +13,10 @@
               <br>
               <form class="form-inline">
                 <div class="form-group">
-                  <input type="text" class="form-control" name="num" placeholder="Enter # of users" Value="">
+                  <div class="{{$message;}}">
+                      <input type="text" class="form-control" name="num" placeholder="# of users" value="{{$fieldValue;}}">
+                      <span class="{{$feedback;}}"></span>
+                  </div>
                 </div>
                 <br><br>
                 <div>
